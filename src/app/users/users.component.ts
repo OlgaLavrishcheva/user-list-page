@@ -9,18 +9,11 @@ import {USERS} from '../mock-users';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-  // users: { firstName: string; lastName: string; userName: string; type: string; email: string } = {
-  //   userName: 'mperry1992',
-  //   firstName: 'Matthew',
-  //   lastName: 'Perry',
-  //   email: 'matthew@mail.com',
-  //   type: 'Administrator',
-  // };
 
   users = USERS;
   selectedUser?: User;
 
-  types: string[] = ['Driver', 'Administrator'];
+  // types: string[] = ['Driver', 'Administrator'];
   model: User = new User('', '', '', '', '', '', '');
 
   constructor() { }

@@ -21,7 +21,9 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let user of users" (click)="onSelect(user)">
+          <tr *ngFor="let user of users"
+              [class.selected]="user === selectedUser"
+              (click)="onSelect(user)">
             <td>{{user.userName}}</td>
             <td>{{user.firstName}}</td>
             <td>{{user.lastName}}</td>
@@ -41,71 +43,74 @@
       </table>
     </div>
 
+<!--    <div class="user">-->
+
+<!--      <div class="row">-->
+<!--        <div *ngIf="selectedUser" class="col-6 wrapper">-->
+
+<!--          <h2>Create new user <span class="close"></span></h2>-->
+
+<!--          <form>-->
+<!--            <div class="form-group">-->
+<!--              <label for="name">User name* </label>-->
+<!--              <input id="name" type="text" class="form-control" name="userName" required-->
+<!--                     [(ngModel)]="selectedUser.userName">-->
+<!--            </div>-->
+
+<!--            <div class="form-group">-->
+<!--              <label for="firstName">First name* </label>-->
+<!--              <input id="firstName" type="text" class="form-control" name="firstName"-->
+<!--                     [(ngModel)]="selectedUser.firstName">-->
+<!--            </div>-->
+
+<!--            <div class="form-group">-->
+<!--              <label for="lastName">Last name* </label>-->
+<!--              <input id="lastName" type="text" class="form-control" name="lastName"-->
+<!--                     [(ngModel)]="selectedUser.lastName">-->
+<!--            </div>-->
+
+<!--            <div class="form-group">-->
+<!--              <label for="email">Email* </label>-->
+<!--              <input id="email" type="text" class="form-control" name="email"-->
+<!--                     [(ngModel)]="selectedUser.email">-->
+<!--            </div>-->
+
+<!--            <div class="form-group">-->
+<!--              <label for="type">Type* </label>-->
+<!--              <select name="type" id="type" class="form-control"-->
+<!--                      [(ngModel)]="selectedUser.type">-->
+
+<!--                <option *ngFor="let type of types" [value]="type">{{type}}</option>-->
+<!--              </select>-->
+<!--            </div>-->
+
+<!--            <div class="form-group">-->
+<!--              <label for="password">Password* </label>-->
+<!--              <input id="password" type="password" class="form-control" name="password"-->
+<!--                     [(ngModel)]="selectedUser.password">-->
+<!--            </div>-->
+
+<!--            <div class="form-group">-->
+<!--              <label for="repeatPassword">Repeat password* </label>-->
+<!--              <input id="repeatPassword" type="password" class="form-control" name="repeatPassword"-->
+<!--                     [(ngModel)]="selectedUser.repeatPassword">-->
+<!--            </div>-->
+
+<!--            <div class="form-group form-button">-->
+<!--              <button class="btn btn-info btn-lg users-button">Create</button>-->
+<!--            </div>-->
+
+<!--          </form>-->
+
+<!--        </div>-->
+
+<!--      </div>-->
+
+<!--    </div>-->
     <div class="user">
-
-      <div class="row">
-        <div *ngIf="selectedUser" class="col-6 wrapper">
-
-          <h2>Create new user <span class="close"></span></h2>
-
-          <form>
-            <div class="form-group">
-              <label for="name">User name* </label>
-              <input id="name" type="text" class="form-control" name="userName" required
-                     [(ngModel)]="selectedUser.userName">
-            </div>
-
-            <div class="form-group">
-              <label for="firstName">First name* </label>
-              <input id="firstName" type="text" class="form-control" name="firstName"
-                     [(ngModel)]="selectedUser.firstName">
-            </div>
-
-            <div class="form-group">
-              <label for="lastName">Last name* </label>
-              <input id="lastName" type="text" class="form-control" name="lastName"
-                     [(ngModel)]="selectedUser.lastName">
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email* </label>
-              <input id="email" type="text" class="form-control" name="email"
-                     [(ngModel)]="selectedUser.email">
-            </div>
-
-            <div class="form-group">
-              <label for="type">Type* </label>
-              <select name="type" id="type" class="form-control"
-                      [(ngModel)]="selectedUser.type">
-
-                <option *ngFor="let type of types" [value]="type">{{type}}</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="password">Password* </label>
-              <input id="password" type="password" class="form-control" name="password"
-                     [(ngModel)]="selectedUser.password">
-            </div>
-
-            <div class="form-group">
-              <label for="repeatPassword">Repeat password* </label>
-              <input id="repeatPassword" type="password" class="form-control" name="repeatPassword"
-                     [(ngModel)]="selectedUser.repeatPassword">
-            </div>
-
-            <div class="form-group form-button">
-              <button class="btn btn-info btn-lg users-button">Create</button>
-            </div>
-
-          </form>
-
-        </div>
-
-      </div>
-
+    <app-user-detail [user]="selectedUser"></app-user-detail>
     </div>
-
   </div>
+
 
 </div>
