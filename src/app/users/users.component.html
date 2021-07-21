@@ -9,96 +9,34 @@
 
     <div class="users">
       <button type="button" class="btn btn-primary btn-lg users-button">Create user</button>
+
       <table class="users-list wrapper" width="100%" cellpadding="12">
         <thead>
-        <tr>
-          <th>USER NAME</th>
-          <th>FIRST NAME</th>
-          <th>LAST NAME</th>
-          <th>EMAIL</th>
-          <th>TIPE</th>
-        </tr>
+          <tr>
+            <th>USER NAME</th>
+            <th>FIRST NAME</th>
+            <th>LAST NAME</th>
+            <th>EMAIL</th>
+            <th>TIPE</th>
+          </tr>
         </thead>
         <tbody>
-        <tr>
-          <td>{{users.userName}}</td>
-          <td>{{users.firstName}}</td>
-          <td>{{users.lastName}}</td>
-          <td>{{users.email}}</td>
-          <td>{{users.type}}</td>
-        </tr>
-        <tr>
-          <td>{{users.userName}}</td>
-          <td>{{users.firstName}}</td>
-          <td>{{users.lastName}}</td>
-          <td>{{users.email}}</td>
-          <td>{{users.type}}</td>
-        </tr>
-        <tr>
-          <td>{{users.userName}}</td>
-          <td>{{users.firstName}}</td>
-          <td>{{users.lastName}}</td>
-          <td>{{users.email}}</td>
-          <td>{{users.type}}</td>
-        </tr>
-        <tr>
-          <td>{{users.userName}}</td>
-          <td>{{users.firstName}}</td>
-          <td>{{users.lastName}}</td>
-          <td>{{users.email}}</td>
-          <td>{{users.type}}</td>
-        </tr>
-        <tr>
-          <td>{{users.userName}}</td>
-          <td>{{users.firstName}}</td>
-          <td>{{users.lastName}}</td>
-          <td>{{users.email}}</td>
-          <td>{{users.type}}</td>
-        </tr>
-        <tr>
-          <td>{{users.userName}}</td>
-          <td>{{users.firstName}}</td>
-          <td>{{users.lastName}}</td>
-          <td>{{users.email}}</td>
-          <td>{{users.type}}</td>
-        </tr>
-        <tr>
-          <td>{{users.userName}}</td>
-          <td>{{users.firstName}}</td>
-          <td>{{users.lastName}}</td>
-          <td>{{users.email}}</td>
-          <td>{{users.type}}</td>
-        </tr>
-        <tr>
-          <td>{{users.userName}}</td>
-          <td>{{users.firstName}}</td>
-          <td>{{users.lastName}}</td>
-          <td>{{users.email}}</td>
-          <td>{{users.type}}</td>
-        </tr>
-        <tr>
-          <td>{{users.userName}}</td>
-          <td>{{users.firstName}}</td>
-          <td>{{users.lastName}}</td>
-          <td>{{users.email}}</td>
-          <td>{{users.type}}</td>
-        </tr>
-        <tr>
-          <td>{{users.userName}}</td>
-          <td>{{users.firstName}}</td>
-          <td>{{users.lastName}}</td>
-          <td>{{users.email}}</td>
-          <td>{{users.type}}</td>
-        </tr>
+          <tr *ngFor="let user of users" (click)="onSelect(user)">
+            <td>{{user.userName}}</td>
+            <td>{{user.firstName}}</td>
+            <td>{{user.lastName}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.type}}</td>
+          </tr>
         </tbody>
         <tfoot>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
         </tfoot>
       </table>
     </div>
@@ -106,7 +44,7 @@
     <div class="user">
 
       <div class="row">
-        <div class="col-6 wrapper">
+        <div *ngIf="selectedUser" class="col-6 wrapper">
 
           <h2>Create new user <span class="close"></span></h2>
 
@@ -114,31 +52,31 @@
             <div class="form-group">
               <label for="name">User name* </label>
               <input id="name" type="text" class="form-control" name="userName" required
-                     [(ngModel)]="model.userName">
+                     [(ngModel)]="selectedUser.userName">
             </div>
 
             <div class="form-group">
               <label for="firstName">First name* </label>
               <input id="firstName" type="text" class="form-control" name="firstName"
-                     [(ngModel)]="model.firstName">
+                     [(ngModel)]="selectedUser.firstName">
             </div>
 
             <div class="form-group">
               <label for="lastName">Last name* </label>
               <input id="lastName" type="text" class="form-control" name="lastName"
-                     [(ngModel)]="model.lastName">
+                     [(ngModel)]="selectedUser.lastName">
             </div>
 
             <div class="form-group">
               <label for="email">Email* </label>
               <input id="email" type="text" class="form-control" name="email"
-                     [(ngModel)]="model.email">
+                     [(ngModel)]="selectedUser.email">
             </div>
 
             <div class="form-group">
               <label for="type">Type* </label>
               <select name="type" id="type" class="form-control"
-                      [(ngModel)]="model.type">
+                      [(ngModel)]="selectedUser.type">
 
                 <option *ngFor="let type of types" [value]="type">{{type}}</option>
               </select>
@@ -147,13 +85,13 @@
             <div class="form-group">
               <label for="password">Password* </label>
               <input id="password" type="password" class="form-control" name="password"
-                     [(ngModel)]="model.password">
+                     [(ngModel)]="selectedUser.password">
             </div>
 
             <div class="form-group">
               <label for="repeatPassword">Repeat password* </label>
               <input id="repeatPassword" type="password" class="form-control" name="repeatPassword"
-                     [(ngModel)]="model.repeatPassword">
+                     [(ngModel)]="selectedUser.repeatPassword">
             </div>
 
             <div class="form-group form-button">
@@ -162,14 +100,12 @@
 
           </form>
 
-          <!--          <p>{{diagnostic}}</p>-->
-
         </div>
-
 
       </div>
 
     </div>
 
   </div>
+
 </div>

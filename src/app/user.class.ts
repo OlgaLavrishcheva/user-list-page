@@ -7,6 +7,5 @@ export class User {
   public type: string,
   public password: string,
   public repeatPassword: string,
-  ) {
-  }
+  ) { }
 }

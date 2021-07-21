@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Users} from '../users';
 import {User} from '../user.class';
+import {USERS} from '../mock-users';
 
 @Component({
   selector: 'app-users',
@@ -8,15 +9,18 @@ import {User} from '../user.class';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-  users: { firstName: string; lastName: string; userName: string; type: string; email: string } = {
-    userName: 'mperry1992',
-    firstName: 'Matthew',
-    lastName: 'Perry',
-    email: 'matthew@mail.com',
-    type: 'Administrator',
-  };
+  // users: { firstName: string; lastName: string; userName: string; type: string; email: string } = {
+  //   userName: 'mperry1992',
+  //   firstName: 'Matthew',
+  //   lastName: 'Perry',
+  //   email: 'matthew@mail.com',
+  //   type: 'Administrator',
+  // };
 
-  types: string[] = ['Гость', 'Модератор', 'Администратор'];
+  users = USERS;
+  selectedUser?: User;
+
+  types: string[] = ['Driver', 'Administrator'];
   model: User = new User('', '', '', '', '', '', '');
 
   constructor() { }
@@ -24,4 +28,7 @@ export class UsersComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSelect(user: User): void {
+    this.selectedUser = user;
+  }
 }
