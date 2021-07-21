@@ -16,6 +16,7 @@ export class UsersComponent implements OnInit {
   // types: string[] = ['Driver', 'Administrator'];
   model: User = new User('', '', '', '', '', '', '');
 
+
   constructor() { }
 
   ngOnInit(): void {

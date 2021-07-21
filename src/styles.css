@@ -154,6 +154,10 @@ tfoot {
   padding: 45px 20px 0 20px;
 }
 
+.user-form-header {
+  border: none;
+}
+
 .row {
   height: 100%;
   margin: 0;
