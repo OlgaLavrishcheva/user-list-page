@@ -9,6 +9,10 @@ body {
   margin: 2em;
 }
 
+.container {
+  max-width: 1230px;
+}
+
 h1 {
   font-size: 2em;
   font-weight: bold;
@@ -36,7 +40,7 @@ h2 {
 .close:after {
   content: "";
   position: absolute;
-  right: 10vw;
+  right: 6vw;
   width: 13px;
   height: 2px;
   background: #acacbc;
@@ -76,7 +80,7 @@ h2 {
 
 .btn-massages-susses {
   position: relative;
-  left: 915px;
+  left: 1000px;
   box-shadow: 0 10px 10px rgba(102, 187, 106, 0.4);
   background: #66bb6a;
 }
@@ -98,7 +102,7 @@ h2 {
 }
 
 .users .users-button {
-  margin-left: 645px;
+  margin-left: 710px;
   margin-bottom: 10px;
 }
 
