@@ -1,1 +1,179 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+}
+
+body {
+  background: #eef0f8;
+  margin: 2em;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.users-field {
+  display: flex;
+}
+
+.close {
+  top: 20px;
+  right: 20px;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+}
+
+.close:before,
+.close:after {
+  content: "";
+  position: absolute;
+  right: 10vw;
+  width: 13px;
+  height: 2px;
+  background: #acacbc;
+}
+
+.close:before {
+  webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.close:after {
+  webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.btn-massages {
+  margin-bottom: 10px;
+}
+
+.btn-massages .btn {
+  width: 190px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.btn {
+  color: #ffffff;
+  padding: 10px;
+  font-size: 0.9em;
+}
+
+.btn-massages-err {
+  position: absolute;
+  box-shadow: 0 10px 10px rgba(239, 125, 160, 0.4);
+  background: #ef7da0;
+}
+
+.btn-massages-susses {
+  position: relative;
+  left: 915px;
+  box-shadow: 0 10px 10px rgba(102, 187, 106, 0.4);
+  background: #66bb6a;
+}
+
+.btn-info {
+  background-color: #0d6efd;
+  margin-top: 10px;
+}
+
+.btn-info:hover {
+  color: #ffffff;
+  background-color: #0b5ed7;
+}
+
+.users {
+  align-items: flex-end;
+  width: 65%;
+  /*background-color: chartreuse;*/
+}
+
+.users .users-button {
+  margin-left: 645px;
+  margin-bottom: 10px;
+}
+
+.users-button {
+  margin: 0;
+  width: 80px;
+  height: 35px;
+  border: none;
+  background-color: #2e8ff0;
+}
+
+.users-list {
+  text-align: left;
+  border-spacing: 0;
+}
+
+.wrapper {
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgba(0, 0, 1, 0.1);
+  background-color: #fff;
+  padding: 20px 10px 15px 10px;
+}
+
+thead {
+  color: #acacbc;
+}
+
+tbody {
+  background: #f4f5f8;
+}
+
+tr {
+  border-bottom: 1px solid #fff;
+}
+
+tr:last-of-type {
+  border-bottom: none;
+  height: 40px;
+}
+
+tfoot {
+  height: 50px;
+}
+
+.user {
+  width: 35%;
+  /*background-color: firebrick;*/
+  padding: 45px 20px 0 20px;
+}
+
+.row {
+  height: 100%;
+  margin: 0;
+}
+
+.form {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.form-control {
+  height: 30px;
+  background-color: #f4f5f8;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.form-button {
+  display: flex;
+  justify-content: center;
+}
+
+.form-button .users-button {
+  box-shadow: 0 5px 6px rgba(46, 143, 240, 0.3);
+}
