@@ -1,68 +1,71 @@
-<!--<div class="user">-->
+<div class="row">
+  <div *ngIf="user" class="col-6 wrapper">
 
-  <div class="row">
-    <div *ngIf="user" class="col-6 wrapper">
+    <p><input type="text" class="user-form-header" required
+              [(ngModel)]="user.firstName + ' ' + user.lastName">
+    </p>
+    <span class="close"></span>
 
-      <p><input type="text" class="user-form-header" required
-                [(ngModel)]="user.firstName + ' ' + user.lastName">
-      </p>
-      <span class="close"></span>
+    <form>
+      <div class="form-group">
+        <label for="name">User name* </label>
+        <input id="name" type="text" class="form-control" name="userName" required
+               [(ngModel)]="user.userName">
+      </div>
 
-      <form>
+      <div class="form-group">
+        <label for="firstName">First name* </label>
+        <input id="firstName" type="text" class="form-control" name="firstName" required
+               [(ngModel)]="user.firstName">
+      </div>
+
+      <div class="form-group">
+        <label for="lastName">Last name* </label>
+        <input id="lastName" type="text" class="form-control" name="lastName" required
+               [(ngModel)]="user.lastName">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email* </label>
+        <input id="email" type="text" class="form-control" name="email" required
+               [(ngModel)]="user.email">
+      </div>
+
+      <div class="form-group">
+        <label for="type">Type* </label>
+        <select name="type" id="type" class="form-control"
+                [(ngModel)]="user.type">
+
+          <option *ngFor="let type of types" [value]="type">{{type}}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password* </label>
+        <input id="password" type="password" class="form-control" name="password" required
+               [(ngModel)]="user.password">
+      </div>
+
+      <div class="form-group">
+        <label for="repeatPassword">Repeat password* </label>
+        <input id="repeatPassword" type="password" class="form-control" name="repeatPassword" required
+               [(ngModel)]="user.repeatPassword">
+      </div>
+
+      <div class="form-button">
         <div class="form-group">
-          <label for="name">User name* </label>
-          <input id="name" type="text" class="form-control" name="userName" required
-                 [(ngModel)]="user.userName">
+          <button class="btn btn-info btn-lg users-button users-button__delete">Delete</button>
         </div>
 
         <div class="form-group">
-          <label for="firstName">First name* </label>
-          <input id="firstName" type="text" class="form-control" name="firstName" required
-                 [(ngModel)]="user.firstName">
+          <button class="btn btn-info btn-lg users-button users-button__save">Save</button>
         </div>
-
-        <div class="form-group">
-          <label for="lastName">Last name* </label>
-          <input id="lastName" type="text" class="form-control" name="lastName" required
-                 [(ngModel)]="user.lastName">
-        </div>
-
-        <div class="form-group">
-          <label for="email">Email* </label>
-          <input id="email" type="text" class="form-control" name="email" required
-                 [(ngModel)]="user.email">
-        </div>
-
-        <div class="form-group">
-          <label for="type">Type* </label>
-          <select name="type" id="type" class="form-control"
-                  [(ngModel)]="user.type">
-
-            <option *ngFor="let type of types" [value]="type">{{type}}</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="password">Password* </label>
-          <input id="password" type="password" class="form-control" name="password" required
-                 [(ngModel)]="user.password">
-        </div>
-
-        <div class="form-group">
-          <label for="repeatPassword">Repeat password* </label>
-          <input id="repeatPassword" type="password" class="form-control" name="repeatPassword" required
-                 [(ngModel)]="user.repeatPassword">
-        </div>
-
-        <div class="form-group form-button">
-          <button class="btn btn-info btn-lg users-button">Create</button>
-        </div>
-
-      </form>
-
-    </div>
+      </div>
+    </form>
 
   </div>
+
+</div>
 
 <!--Create new user -->
 

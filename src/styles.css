@@ -101,6 +101,11 @@ h2 {
   /*background-color: chartreuse;*/
 }
 
+.form-button {
+  display: flex;
+  justify-content: space-between;
+}
+
 .users .users-button {
   margin-left: 710px;
   margin-bottom: 10px;
@@ -111,8 +116,26 @@ h2 {
   width: 80px;
   height: 35px;
   border: none;
-  background-color: #2e8ff0;
+  /*background-color: #2e8ff0;*/
 }
+
+.users-button__save {
+  box-shadow: 0 5px 6px rgba(46, 143, 240, 0.4);
+}
+.users-button__save:hover {
+  box-shadow: 0 5px 6px rgba(46, 143, 240, 0.4);
+  background-color: #0d6efd;
+}
+
+.users-button__delete {
+  box-shadow: 0 10px 10px rgba(239, 125, 160, 0.4);
+  background-color: #ef7da0;
+}
+.users-button__delete:hover {
+  box-shadow: 0 10px 10px rgba(239, 125, 160, 0.4);
+  background-color: #ef7da0;
+}
+
 
 .users-list {
   text-align: left;
@@ -175,13 +198,4 @@ tfoot {
   border: none;
   border-radius: 4px;
   margin-bottom: 10px;
-}
-
-.form-button {
-  display: flex;
-  justify-content: center;
-}
-
-.form-button .users-button {
-  box-shadow: 0 5px 6px rgba(46, 143, 240, 0.3);
 }
