@@ -8,7 +8,9 @@
   <div class="users-field">
 
     <div class="users">
-      <button type="button" class="btn btn-primary btn-lg users-button">
+      <button type="button" class="btn btn-primary btn-lg users-button"
+              [class.selected]="userNew === selectedUserNew"
+              (click)="onSelect(userNew)">
         Create user
       </button>
 
@@ -50,9 +52,8 @@
         <app-user-detail [user]="selectedUser"></app-user-detail>
       </div>
 
-      <div class="user-new">
-        <app-user-new></app-user-new>
-
+      <div class="userNew">
+        <app-user-new [userNew]="selectedUserNew"></app-user-new>
       </div>
     </div>
   </div>

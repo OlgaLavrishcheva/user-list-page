@@ -180,7 +180,7 @@ tfoot {
 /*  z-index: 999;*/
 /*}*/
 
-.user, .user-new {
+.user, .userNew {
   display: block;
   position: absolute;
   width: 35%;

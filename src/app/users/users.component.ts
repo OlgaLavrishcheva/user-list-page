@@ -10,6 +10,8 @@ import {UserService} from '../user.service';
 export class UsersComponent implements OnInit {
   users: User[] = [];
   selectedUser?: User;
+  userNew: User;
+  selectedUserNew?: User;
   types: string[] = ['Driver', 'Administrator'];
 
   model: User = new User('', '', '', '', '', '', '');
