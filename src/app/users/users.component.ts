@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Users} from '../users';
 import {User} from '../user.class';
-import {USERS} from '../mock-users';
 import {UserService} from '../user.service';
 
 @Component({
@@ -10,10 +8,9 @@ import {UserService} from '../user.service';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-
-  // users = USERS;
   users: User[] = [];
   selectedUser?: User;
+  types: string[] = ['Driver', 'Administrator'];
 
   model: User = new User('', '', '', '', '', '', '');
 

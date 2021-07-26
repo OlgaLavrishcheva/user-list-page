@@ -8,6 +8,7 @@ import {User} from '../user.class';
 })
 export class UserNewComponent implements OnInit {
   @Input() userNew?: User;
+  types: string[] = ['Driver', 'Administrator'];
 
   constructor() { }
 
