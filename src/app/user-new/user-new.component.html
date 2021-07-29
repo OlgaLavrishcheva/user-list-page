@@ -1,7 +1,6 @@
 <div *ngIf="isVisibleBtn" class="nameToClose" id="isVisibleBtn">
   <button type="button" class="btn btn-lg btn-massages-err disabled">Error massages</button>
   <button type="button" class="btn btn-lg btn-massages-susses disabled">Success massages</button>
-<!--<span (click)="isVisible = false; isVisibleBtn = false" class="close"></span>-->
 </div>
 <div *ngIf="isVisible" class="row nameToClose" id="isVisible">
 
@@ -14,9 +13,6 @@
       return false;
     }
     f1('isVisibleBtn', 'isVisible')"></a>
-<!--    <span class="close"></span>-->
-<!--    <span (click)="my_func()" class="close"></span>-->
-<!--    <span (click)="isVisible = false; isVisibleBtn = false" class="close"></span>-->
     <form>
       <div class="form-group">
         <label for="name">User name* </label>
@@ -71,8 +67,3 @@
 
   </div>
 </div>
-<!--  <script>-->
-<!--    function isBtn() = {-->
-<!--      return isVisibleBtn = false-->
-<!--    }-->
-<!--  </script>-->
