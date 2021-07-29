@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {User} from '../user.class';
 import {UserService} from '../user.service';
 
@@ -15,8 +15,11 @@ export class UsersComponent implements OnInit {
   types: string[] = ['Driver', 'Administrator'];
 
   model: User = new User('', '', '', '', '', '', '');
+  isVisible: boolean;
+  isVisibleBtn: boolean;
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService) {
+  }
 
   ngOnInit(): void {
     this.getUsers();

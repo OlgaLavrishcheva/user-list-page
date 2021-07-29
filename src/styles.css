@@ -19,7 +19,8 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2em;
+  font-family: Roboto;
+  font-size: 1.1em;
   font-weight: bold;
   margin-bottom: 15px;
 }
@@ -30,8 +31,6 @@ h2 {
 }
 
 .close {
-  top: 20px;
-  right: 20px;
   width: 10px;
   height: 10px;
   cursor: pointer;
@@ -41,7 +40,8 @@ h2 {
 .close:after {
   content: "";
   position: absolute;
-  right: 6vw;
+  top: 5.3vw;
+  right: 3vw;
   width: 13px;
   height: 2px;
   background: #acacbc;
@@ -58,8 +58,15 @@ h2 {
 }
 
 .btn-massages {
+  height: 50px;
   margin-bottom: 10px;
 }
+
+/*.btn-wrapper {*/
+/*  width: 100%;*/
+/*  height: 50px;*/
+/*  background-color: coral;*/
+/*}*/
 
 .btn-massages .btn {
   width: 190px;

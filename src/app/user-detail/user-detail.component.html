@@ -1,10 +1,10 @@
 <div class="row">
   <div *ngIf="user" class="col-6 wrapper">
 
-    <p><input type="text" class="user-form-header" required
-              [(ngModel)]="user.firstName + ' ' + user.lastName">
-    </p>
-    <span class="close"></span>
+    <h2>{{user.firstName + " " + user.lastName}}</h2>
+    <span (click)="offSelect(user)" class="close">
+          <span></span>
+    </span>
 
     <form>
       <div class="form-group">
@@ -66,6 +66,4 @@
   </div>
 
 </div>
-
-<!--Create new user -->
 

@@ -8,6 +8,10 @@ import {User} from '../user.class';
 })
 export class UserNewComponent implements OnInit {
   @Input() userNew?: User;
+  @Input() header: string;
+  @Input() isVisibleBtn: boolean;
+  @Input() isVisible: boolean;
+
   types: string[] = ['Driver', 'Administrator'];
 
   constructor() { }

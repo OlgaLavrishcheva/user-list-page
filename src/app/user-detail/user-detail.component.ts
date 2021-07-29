@@ -7,11 +7,19 @@ import {User} from '../user.class';
   styleUrls: ['./user-detail.component.css']
 })
 export class UserDetailComponent implements OnInit {
+  users: User[] = [];
+  selectedUser?: User;
   @Input() user?: User;
+  @Input() isVisible: boolean;
+  @Input() header: string;
   types: string[] = ['Driver', 'Administrator'];
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  // tslint:disable-next-line:typedef
+  offSelect(user: User) {
+    this.user = null;
+  }
 }

@@ -1,18 +1,16 @@
 <div class="container">
 
   <div class="btn-massages">
-    <button type="button" class="btn btn-lg btn-massages-err disabled">Error massages</button>
-    <button type="button" class="btn btn-lg btn-massages-susses disabled">Success massages</button>
+    <app-user-new [isVisibleBtn]="isVisibleBtn"></app-user-new>
   </div>
 
   <div class="users-field">
 
     <div class="users">
-      <button type="button" class="btn btn-primary btn-lg users-button"
-              [class.selected]="userNew === selectedUserNew"
-              (click)="onSelect(userNew)">
-        Create user
-      </button>
+
+      <span (click)="isVisible = true; isVisibleBtn = true" class="btn btn-primary btn-lg users-button">
+         <span class="btn-header">Create user</span>
+      </span>
 
       <table class="users-list wrapper" width="100%" cellpadding="12">
         <thead>
@@ -53,7 +51,8 @@
       </div>
 
       <div class="userNew">
-        <app-user-new [userNew]="selectedUserNew"></app-user-new>
+        <app-user-new [isVisible]="isVisible"
+        header="Create new user"></app-user-new>
       </div>
     </div>
   </div>
